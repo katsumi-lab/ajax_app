@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def checked
+
     post = Post.find(params[:id]) #既読したmemoのIDが渡される
     if post.checked  #既読であるか判定するプロパティ
       post.update(checked: false)
